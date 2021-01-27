@@ -13,9 +13,6 @@
 
   <include name="omni-ginkgo.xml" />
 
-  <!-- General -->
-  <project path="android" name="android" remote="omnirom" revision="android-10" />
-
   <!-- Vendor -->
   <project path="vendor/omni" name="android_vendor_omni" remote="omnirom" revision="android-10" />
   <project path="vendor/interfaces" name="android_vendor_interfaces" remote="omnirom" revision="android-10" />
