@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- OmniROM Ginkgo remote -->
+  <remote  name="omni-ginkgo"
+           fetch="https://github.com/OmniROMGinkgo/"
+           revision="android-10" />
+
+  <!-- OmniROM Ginkgo REPOS -->
+
+  <!-- General -->
+  <project path="build/make" name="android_build" remote="omni-ginkgo" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="device/omni/sepolicy" name="android_device_omni_sepolicy" remote="omni-ginkgo" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="omni-ginkgo" />
+  <project path="device/qcom/sepolicy-legacy" name="android_device_qcom_sepolicy" remote="omni-ginkgo" revision="android-10-legacy" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy" remote="omni-ginkgo" revision="android-10-legacy-um" />
+  <project path="manifest" name="android_manifest" remote="omni-ginkgo" />
+
+  <!-- External -->
+  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="omni-ginkgo" />
+  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="omni-ginkgo" />
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="omni-ginkgo" />
+  <project path="external/bson" name="android_external_bson" remote="omni-ginkgo" />
+  <project path="external/libnfc-nxp" name="android_external_libnfc-nxp" remote="omni-ginkgo" />
+  <project path="external/json-c" name="android_external_json-c" remote="omni-ginkgo" />
+
+  <!-- Hardware -->
+  <project path="hardware/omni/interfaces" name="android_hardware_omni_interfaces" remote="omni-ginkgo" />
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom_common" remote="omni-ginkgo" />
+  <project path="hardware/qcom-caf/bt" name="android_hardware_qcom_bt" remote="omni-ginkgo" revision="android-10-caf" />
+  <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" remote="omni-ginkgo" revision="android-10-caf" />
+
+  <!-- Packages -->
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="omni-ginkgo" />
+
+  <!-- System -->
+  <project path="system/qcom" name="android_system_qcom" remote="omni-ginkgo" />
+  <project path="system/tools/dtbtool" name="android_system_tools_dtbtool" remote="omni-ginkgo" />
+
+  <!-- Vendor -->
+  <project path="vendor/nxp/opensource/interfaces/nfc" name="android_vendor_nxp_interfaces_opensource_nfc" remote="omni-ginkgo" />
+  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="omni-ginkgo" />
+  <project path="vendor/nxp/opensource/commonsys/frameworks" name="android_vendor_nxp_opensource_frameworks" remote="omni-ginkgo" />
+  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="android_vendor_nxp_opensource_packages_apps_Nfc" remote="omni-ginkgo" />
+  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="omni-ginkgo" revision="android-10-pn5xx" />
+  <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="omni-ginkgo" revision="android-10-pn5xx" />
+  <project path="vendor/nxp/opensource/sn100x/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="omni-ginkgo" revision="android-10-sn100x" />
+  <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="omni-ginkgo" revision="android-10-sn100x" />
+  <project path="vendor/qcom/opensource/audio" name="android_vendor_qcom_opensource_audio" remote="omni-ginkgo" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="omni-ginkgo" />
+  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="omni-ginkgo" />
+  <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" remote="omni-ginkgo" />
+  <project path="vendor/qcom/opensource/libfmjni" name="android_vendor_qcom_opensource_libfmjni" remote="omni-ginkgo" />
+  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" remote="omni-ginkgo" />
+  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" remote="omni-ginkgo" />
+
+ </manifest>

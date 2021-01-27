@@ -11,7 +11,7 @@
 
   <include name="omni-extra.xml" />
 
-  <!-- OmniROM Projects -->
+  <include name="omni-ginkgo.xml" />
 
   <!-- General -->
   <project path="android" name="android" remote="omnirom" revision="android-10" />
